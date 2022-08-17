@@ -2432,6 +2432,39 @@ func (l *Lightning) GetSharedSecret(point string) (string, error) {
 	return result.SharedSecret, err
 }
 
+type DeletePay struct {
+	Id                     uint64 `json:"id"`
+	PaymentHash            string `json:"payment_hash"`
+	Status                 string `json:"status"`
+	AmountSentMilliSatoshi string `json:"amount_sent_msat"`
+	CreatedAt              uint64 `json:"created_at"`
+	PartId                 uint64 `json:"partid,omitempty"`
+	Destination            string `json:"destination,omitempty"`
+	AmountMillisatoshi     string `json:"amount_msat,omitempty"`
+	GroupId                uint64 `json:"groupid,omitempty"`
+	PaymentPreimage        string `json:"payment_preimage,omitempty"`
+	Label                  string `json:"label,omitempty"`
+	Bolt11                 string `json:"bolt11,omitempty"`
+	Bolt12                 string `json:"bolt12,omitempty"`
+	ErrorOnion             string `json:"erroronion,omitempty"`
+}
+
+type DeletePayRequest struct {
+	PaymentHash string `json:"payment_hash"`
+	Status      string `json:"status"`
+}
+
+func (r DeletePayRequest) Name() string {
+	return "delpay"
+}
+
+// Delete payment with {payment_hash} with {status}
+func (l *Lightning) DeletePay(paymentHash, status string) (*DeletePay, error) {
+	var result DeletePay
+	err := l.client.Request(&DeletePayRequest{paymentHash, status}, &result)
+	return &result, err
+}
+
 // List of all non-dev RPC methods
 var Lightning_RpcMethods map[string](func() jrpc2.Method)
 
@@ -2493,4 +2526,5 @@ func init() {
 	Lightning_RpcMethods[(&PluginRequest{}).Name()] = func() jrpc2.Method { return new(PluginRequest) }
 	Lightning_RpcMethods[(&SharedSecretRequest{}).Name()] = func() jrpc2.Method { return new(SharedSecretRequest) }
 	Lightning_RpcMethods[(&CustomMessageRequest{}).Name()] = func() jrpc2.Method { return new(CustomMessageRequest) }
+	Lightning_RpcMethods[(&DeletePayRequest{}).Name()] = func() jrpc2.Method { return new(DeletePayRequest) }
 }
