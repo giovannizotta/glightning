@@ -10,7 +10,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/elementsproject/glightning/glightning"
+	"github.com/giovannizotta/glightning/glightning"
 	"github.com/stretchr/testify/assert"
 )
 

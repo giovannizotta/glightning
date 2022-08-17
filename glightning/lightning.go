@@ -7,7 +7,7 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/elementsproject/glightning/jrpc2"
+	"github.com/giovannizotta/glightning/jrpc2"
 )
 
 // This file's the one that holds all the objects for the

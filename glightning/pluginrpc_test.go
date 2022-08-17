@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/elementsproject/glightning/glightning"
-	"github.com/elementsproject/glightning/jrpc2"
+	"github.com/giovannizotta/glightning/glightning"
+	"github.com/giovannizotta/glightning/jrpc2"
 )
 
 type ParamMethod struct {

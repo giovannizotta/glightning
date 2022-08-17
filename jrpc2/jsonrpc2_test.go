@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/elementsproject/glightning/jrpc2"
+	"github.com/giovannizotta/glightning/jrpc2"
 	"github.com/stretchr/testify/assert"
 )
 

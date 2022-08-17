@@ -17,8 +17,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/elementsproject/glightning/gbitcoin"
-	"github.com/elementsproject/glightning/glightning"
+	"github.com/giovannizotta/glightning/gbitcoin"
+	"github.com/giovannizotta/glightning/glightning"
 	"github.com/stretchr/testify/assert"
 )
 

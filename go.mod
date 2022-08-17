@@ -1,4 +1,4 @@
-module github.com/elementsproject/glightning
+module github.com/giovannizotta/glightning
 
 go 1.16
 

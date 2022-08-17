@@ -11,7 +11,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/elementsproject/glightning/jrpc2"
+	"github.com/giovannizotta/glightning/jrpc2"
 )
 
 type Subscription string

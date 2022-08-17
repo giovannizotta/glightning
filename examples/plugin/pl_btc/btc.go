@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/elementsproject/glightning/gbitcoin"
-	"github.com/elementsproject/glightning/glightning"
+	"github.com/giovannizotta/glightning/gbitcoin"
+	"github.com/giovannizotta/glightning/glightning"
 )
 
 const MaxFeeMultiple uint64 = 10

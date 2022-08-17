@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/elementsproject/glightning/glightning"
+	"github.com/giovannizotta/glightning/glightning"
 )
 
 func main() {

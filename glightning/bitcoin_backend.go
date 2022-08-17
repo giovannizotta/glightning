@@ -13,7 +13,7 @@ package glightning
 import (
 	"strings"
 
-	"github.com/elementsproject/glightning/jrpc2"
+	"github.com/giovannizotta/glightning/jrpc2"
 )
 
 type BtcBackend_MethodName string
